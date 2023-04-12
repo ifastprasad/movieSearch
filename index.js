@@ -33,7 +33,7 @@ function fetchApiData(searchTerm) {
   clearTimeout(timeoutId);
 
   timeoutId = setTimeout(() => {
-    fetch(`http://www.omdbapi.com/?apikey=${key}&s=$${inputElement.value}`)
+    fetch(`http://www.omdbapi.com/?apikey=${key}&s=$${searchTerm}`)
       .then(response => response.json())
       .then(data => {
         // Process the API response data
